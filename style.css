@@ -1,0 +1,73 @@
+
+    html,body{
+        background-color: blueviolet;
+        overflow: hidden;
+        height:100%;
+        width:100%;
+        margin:0px;
+        padding:0px;
+    }
+    .background{
+        background:url("background.jpg") center;
+        height: 100%;
+        width: 100%;
+        background-size:cover;
+        position: relative;
+        animation:shakebody linear 6s infinite;
+    }  
+    .plane{
+        height:20vh;
+        width: 20vh;
+        background:url("plane.png") center no-repeat;
+        background-size:cover;
+        -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    position: absolute;
+     z-index: 2;
+       
+
+    }
+    .track{
+     width:800vw;
+     height:40%;
+     background: url("track.png") no-repeat center;
+      
+     position: absolute;
+     background-repeat:repeat-x;
+    }
+    svg{
+        height: 10vh;
+        width: 10vh;
+        z-index:5;
+        top:4vh;
+        left:4vh;
+        display: inline;
+    }
+    svg:hover{
+        cursor:pointer;
+    }
+    .mute svg{
+        position:absolute;
+        top:4vh;
+        left:4vh;
+        height: 10vh;
+        width: 10vh;
+        z-index: 3;
+    }
+    .mute svg:hover{
+        cursor:pointer;
+
+    }
+    
+    @keyframes shakebody
+    {
+        0%{
+            transform: translateY(-3vh);
+        }
+        50%{
+            transform: translateY(3vh);
+        }
+        100%{
+            transform: translateY(-3vh);
+        }
+    }
